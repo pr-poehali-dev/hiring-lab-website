@@ -96,6 +96,7 @@ const HeroSection = () => {
               alt="HR специалист за компьютером"
               className="relative z-10 w-full max-w-lg object-contain rounded-2xl"
               style={{
+                mixBlendMode: "multiply",
                 filter: "brightness(1.02) contrast(1.05)",
               }}
             />

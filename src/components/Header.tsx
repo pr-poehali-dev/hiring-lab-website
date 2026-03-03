@@ -33,9 +33,16 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-0 font-heading text-xl md:text-2xl font-bold">
-            <span className="text-white">Найм</span>
-            <span className="text-accent">Lab</span>
+          <a href="#" className="flex items-center gap-3">
+            <img
+              src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/bucket/404d8d31-8e4a-4b46-a411-84ade1802785.jpg"
+              alt="НаймLab"
+              className="h-10 w-10 rounded-xl object-cover"
+            />
+            <span className="font-heading text-xl md:text-2xl font-bold">
+              <span className="text-white">Найм</span>
+              <span className="text-accent">Lab</span>
+            </span>
           </a>
 
           {/* Desktop Nav */}

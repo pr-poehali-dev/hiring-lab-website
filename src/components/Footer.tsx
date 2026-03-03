@@ -29,7 +29,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
-            <a href="#" className="inline-flex items-center font-heading text-2xl font-bold mb-4">
+            <a href="#" className="inline-flex items-center gap-3 font-heading text-2xl font-bold mb-4">
+              <img
+                src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/bucket/404d8d31-8e4a-4b46-a411-84ade1802785.jpg"
+                alt="НаймLab"
+                className="h-9 w-9 rounded-xl object-cover"
+              />
               <span className="text-white">Найм</span>
               <span className="text-accent">Lab</span>
             </a>

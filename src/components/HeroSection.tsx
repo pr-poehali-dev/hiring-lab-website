@@ -89,13 +89,15 @@ const HeroSection = () => {
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-primary/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-accent/15 rounded-full blur-2xl" />
             <img
-              src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/files/6d113a76-a517-49ab-9603-397ec80e8dce.jpg"
+              src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/files/c999717d-9e42-4e90-9b7d-5f226a751c58.jpg"
               alt="HR специалист за компьютером"
               className="relative z-10 w-full max-w-lg object-cover"
               style={{
-                mixBlendMode: "lighten",
-                maskImage: "radial-gradient(ellipse 80% 90% at 50% 55%, black 40%, transparent 75%)",
-                WebkitMaskImage: "radial-gradient(ellipse 80% 90% at 50% 55%, black 40%, transparent 75%)",
+                mixBlendMode: "screen",
+                maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 90%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 100%)",
+                WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%, black 90%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 100%)",
+                maskComposite: "intersect",
+                WebkitMaskComposite: "source-in",
               }}
             />
           </div>

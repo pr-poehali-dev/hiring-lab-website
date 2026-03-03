@@ -92,7 +92,7 @@ const HeroSection = () => {
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-56 h-56 bg-accent/20 rounded-full blur-2xl animate-glow-pulse" style={{ animationDelay: "2s" }} />
             {/* Floating GIF */}
             <img
-              src="https://i127.fastpic.org/big/2026/0303/09/_655252b0b9e7264ab2cea3949fabcd09.gif"
+              src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmRoZ3k4cWE2b3VzcDk1dXNkd3R2ajU4ZjR5aG41aWI4b2lnMHh2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IfFmnaxJzjzD6wFMls/giphy.gif"
               alt="HR специалист за компьютером"
               className="relative z-10 w-full max-w-lg object-contain rounded-2xl"
               style={{

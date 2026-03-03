@@ -37,7 +37,7 @@ const Header = () => {
             <img
               src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/bucket/f5a34b6b-33d0-41a4-8a5a-9a1547e11920.PNG"
               alt="НаймLab"
-              className="h-10 w-10 object-contain"
+              className="h-12 w-12 object-contain"
               style={{ mixBlendMode: "multiply", filter: "brightness(1.2)" }}
             />
             <span className="font-heading text-xl md:text-2xl font-bold">

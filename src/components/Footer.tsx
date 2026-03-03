@@ -33,7 +33,7 @@ const Footer = () => {
               <img
                 src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/bucket/f5a34b6b-33d0-41a4-8a5a-9a1547e11920.PNG"
                 alt="НаймLab"
-                className="h-9 w-9 object-contain"
+                className="h-11 w-11 object-contain"
                 style={{ mixBlendMode: "multiply", filter: "brightness(1.2)" }}
               />
               <span className="text-white">Найм</span>

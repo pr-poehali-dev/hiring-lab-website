@@ -90,14 +90,12 @@ const HeroSection = () => {
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-56 h-56 bg-accent/20 rounded-full blur-2xl animate-glow-pulse" style={{ animationDelay: "2s" }} />
             {/* Floating image with screen blend to remove dark bg */}
             <img
-              src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/files/abf01654-6f6b-4bd3-b918-864c4256b11d.jpg"
+              src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/bucket/f09bde14-770b-43c5-b480-18d563dd9faa.PNG"
               alt="HR специалист за компьютером"
-              className="relative z-10 w-full max-w-lg object-cover animate-hero-float"
+              className="relative z-10 w-full max-w-lg object-contain animate-hero-float"
               style={{
-                mixBlendMode: "screen",
-                maskImage: "radial-gradient(ellipse 85% 85% at 50% 48%, black 30%, black 55%, transparent 78%)",
-                WebkitMaskImage: "radial-gradient(ellipse 85% 85% at 50% 48%, black 30%, black 55%, transparent 78%)",
-                filter: "brightness(1.1) contrast(1.05)",
+                mixBlendMode: "multiply",
+                filter: "brightness(0.95) contrast(1.1)",
               }}
             />
           </div>

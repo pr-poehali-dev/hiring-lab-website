@@ -63,6 +63,7 @@ const Header = () => {
           <div className="hidden lg:block">
             <Button
               className="gradient-primary text-white font-body font-semibold rounded-xl px-6 h-10 border-0 hover:opacity-90 transition-opacity"
+              onClick={() => document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" })}
             >
               Оставить заявку
             </Button>
@@ -102,6 +103,7 @@ const Header = () => {
             ))}
             <Button
               className="gradient-primary text-white font-body font-semibold rounded-xl mt-2 w-full border-0 hover:opacity-90"
+              onClick={() => { document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" }); setIsMobileMenuOpen(false); }}
             >
               Оставить заявку
             </Button>

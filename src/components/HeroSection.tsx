@@ -53,6 +53,7 @@ const HeroSection = () => {
               <Button
                 className="gradient-primary text-white font-body font-semibold text-base rounded-xl h-14 px-8 border-0 hover:opacity-90 transition-opacity shadow-lg shadow-primary/25"
                 size="lg"
+                onClick={() => document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Получить консультацию
               </Button>
@@ -60,6 +61,7 @@ const HeroSection = () => {
                 variant="outline"
                 className="border-white/30 text-white font-body font-semibold text-base rounded-xl h-14 px-8 bg-transparent hover:bg-white/10 hover:text-white transition-all"
                 size="lg"
+                onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Рассчитать стоимость
               </Button>

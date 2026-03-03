@@ -85,19 +85,19 @@ const HeroSection = () => {
 
           {/* Right: Person with computer */}
           <div className="hidden lg:flex items-end justify-center relative animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            {/* Glow behind image */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-primary/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-accent/15 rounded-full blur-2xl" />
+            {/* Animated glow layers */}
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/25 rounded-full blur-3xl animate-glow-pulse" />
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-56 h-56 bg-accent/20 rounded-full blur-2xl animate-glow-pulse" style={{ animationDelay: "2s" }} />
+            {/* Floating image with screen blend to remove dark bg */}
             <img
               src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/files/c999717d-9e42-4e90-9b7d-5f226a751c58.jpg"
               alt="HR специалист за компьютером"
-              className="relative z-10 w-full max-w-lg object-cover"
+              className="relative z-10 w-full max-w-lg object-cover animate-hero-float"
               style={{
                 mixBlendMode: "screen",
-                maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 90%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 100%)",
-                WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%, black 90%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 100%)",
-                maskComposite: "intersect",
-                WebkitMaskComposite: "source-in",
+                maskImage: "radial-gradient(ellipse 85% 85% at 50% 48%, black 30%, black 55%, transparent 78%)",
+                WebkitMaskImage: "radial-gradient(ellipse 85% 85% at 50% 48%, black 30%, black 55%, transparent 78%)",
+                filter: "brightness(1.1) contrast(1.05)",
               }}
             />
           </div>

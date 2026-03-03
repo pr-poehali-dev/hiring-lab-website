@@ -31,9 +31,10 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <a href="#" className="inline-flex items-center gap-3 font-heading text-2xl font-bold mb-4">
               <img
-                src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/bucket/404d8d31-8e4a-4b46-a411-84ade1802785.jpg"
+                src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/bucket/f5a34b6b-33d0-41a4-8a5a-9a1547e11920.PNG"
                 alt="НаймLab"
-                className="h-9 w-9 rounded-xl object-cover"
+                className="h-9 w-9 object-contain"
+                style={{ mixBlendMode: "multiply", filter: "brightness(1.2)" }}
               />
               <span className="text-white">Найм</span>
               <span className="text-accent">Lab</span>

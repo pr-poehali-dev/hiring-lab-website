@@ -92,7 +92,7 @@ const HeroSection = () => {
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-56 h-56 bg-accent/20 rounded-full blur-2xl animate-glow-pulse" style={{ animationDelay: "2s" }} />
             {/* Floating GIF */}
             <img
-              src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/files/ac98cfa8-9dc0-41a9-9d46-5df4d070bacd.jpg"
+              src="https://i127.fastpic.org/big/2026/0303/09/_655252b0b9e7264ab2cea3949fabcd09.gif"
               alt="HR специалист за компьютером"
               className="relative z-10 w-full max-w-lg object-contain rounded-2xl"
               style={{

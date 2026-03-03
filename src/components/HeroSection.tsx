@@ -90,14 +90,13 @@ const HeroSection = () => {
             {/* Animated glow layers */}
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/25 rounded-full blur-3xl animate-glow-pulse" />
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-56 h-56 bg-accent/20 rounded-full blur-2xl animate-glow-pulse" style={{ animationDelay: "2s" }} />
-            {/* Floating image with screen blend to remove dark bg */}
+            {/* Floating GIF */}
             <img
-              src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/bucket/f09bde14-770b-43c5-b480-18d563dd9faa.PNG"
+              src="https://i127.fastpic.org/big/2026/0303/bb/_7303a65658bc75bf7001d6351566d8bb.gif"
               alt="HR специалист за компьютером"
-              className="relative z-10 w-full max-w-lg object-contain animate-hero-float"
+              className="relative z-10 w-full max-w-lg object-contain rounded-2xl"
               style={{
-                mixBlendMode: "multiply",
-                filter: "brightness(0.95) contrast(1.1)",
+                filter: "brightness(1.02) contrast(1.05)",
               }}
             />
           </div>

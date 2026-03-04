@@ -111,9 +111,7 @@ const Footer = () => {
                 <a
                   href="tel:+74950000000"
                   className="font-body text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  +7 (495) 000-00-00
-                </a>
+                >+7 (927) 707-47-77</a>
               </li>
               <li className="flex items-start gap-3">
                 <Icon

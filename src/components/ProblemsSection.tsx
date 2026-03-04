@@ -2,34 +2,40 @@ import Icon from "@/components/ui/icon";
 
 const problems = [
   {
-    icon: "TrendingDown",
-    title: "Бюджет тратится, заявок нет",
-    description: "Деньги уходят на нецелевые клики, а продаж не прибавляется. Реклама работает «в минус».",
-  },
-  {
-    icon: "EyeOff",
-    title: "Сайт не виден в поиске",
-    description: "Конкуренты занимают топ Яндекса, а ваш сайт — на 5-й странице, куда никто не доходит.",
-  },
-  {
-    icon: "Settings",
-    title: "Прошлый подрядчик пропал",
-    description: "Агентство или фрилансер взял деньги, сделал непонятно что и исчез. Результата ноль.",
-  },
-  {
-    icon: "BarChart2",
-    title: "Нет понимания, что работает",
-    description: "Непрозрачная отчётность, размытые KPI. Невозможно понять, за что вообще платите.",
-  },
-  {
     icon: "Clock",
-    title: "Слишком долго ждёте результат",
-    description: "Месяцами ждёте эффекта, а трафик и заявки не растут. Время — это тоже деньги.",
+    title: "Вакансия висит месяцами",
+    description:
+      "Поток резюме есть, но подходящих — единицы. Время уходит на скрининг, а результата нет.",
+  },
+  {
+    icon: "TrendingDown",
+    title: "Высокая текучка кадров",
+    description:
+      "Нанимаете — увольняются. Тратите деньги на обучение, а через 3 месяца снова ищете человека.",
   },
   {
     icon: "AlertTriangle",
-    title: "Высокая стоимость заявки",
-    description: "Цена лида неоправданно высокая и съедает всю маржу. Бизнес работает на рекламный бюджет.",
+    title: "Кандидаты не соответствуют",
+    description:
+      "На собеседовании — отлично, на работе — разочарование. Резюме и реальность расходятся.",
+  },
+  {
+    icon: "DollarSign",
+    title: "Дорогой найм",
+    description:
+      "Агентства берут огромные комиссии, а результат непредсказуем. Непонятно, за что платите.",
+  },
+  {
+    icon: "UserX",
+    title: "Нет времени на HR",
+    description:
+      "Руководитель сам проводит интервью вместо того, чтобы заниматься бизнесом.",
+  },
+  {
+    icon: "Building2",
+    title: "Масштабирование стопорится",
+    description:
+      "Хотите расти, но не можете — не хватает людей. Команда перегружена, новых не найти.",
   },
 ];
 
@@ -43,7 +49,7 @@ const ProblemsSection = () => {
             Узнаёте <span className="gradient-primary-text">себя?</span>
           </h2>
           <p className="font-body text-gray-400 text-lg">
-            Типичные проблемы бизнеса с интернет-рекламой, которые мы решаем каждый день
+            Типичные проблемы бизнеса с наймом, которые мы решаем каждый день
           </p>
         </div>
 
@@ -54,7 +60,11 @@ const ProblemsSection = () => {
               className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-primary/30 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-4">
-                <Icon name={problem.icon as "TrendingDown"} size={24} className="text-red-400" />
+                <Icon
+                  name={problem.icon as "Clock"}
+                  size={24}
+                  className="text-red-400"
+                />
               </div>
               <h3 className="font-heading font-semibold text-lg text-white mb-2">
                 {problem.title}
@@ -72,9 +82,13 @@ const ProblemsSection = () => {
           </p>
           <button
             className="gradient-primary text-white font-body font-semibold rounded-xl px-8 h-12 border-0 hover:opacity-90 transition-opacity"
-            onClick={() => document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document
+                .getElementById("contacts")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
-            Разобраться с проблемой
+            Обсудить задачу
           </button>
         </div>
       </div>

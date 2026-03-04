@@ -2,31 +2,55 @@ import Icon from "@/components/ui/icon";
 
 const services = [
   {
-    icon: "MousePointerClick",
-    title: "Яндекс Директ",
-    description: "Настройка и ведение контекстной рекламы. Поиск, РСЯ, ретаргетинг. Максимум заявок при минимальном бюджете.",
-    features: ["Анализ конкурентов", "Подбор 500+ ключей", "A/B тесты объявлений", "Еженедельные отчёты"],
+    icon: "Users",
+    title: "Подбор линейного персонала",
+    description:
+      "Операционисты, менеджеры, специалисты — закрываем массовые вакансии быстро и качественно.",
+    features: [
+      "Скрининг резюме",
+      "Телефонные интервью",
+      "Проверка рекомендаций",
+      "Срок 7–14 дней",
+    ],
     accent: "primary",
   },
   {
-    icon: "Search",
-    title: "SEO-продвижение",
-    description: "Вывод сайта в топ Яндекса и Google. Органический трафик, который работает 24/7 без оплаты за клик.",
-    features: ["Технический аудит", "Написание SEO-текстов", "Ссылочное продвижение", "Рост позиций от 3 мес"],
+    icon: "Briefcase",
+    title: "Подбор управленцев",
+    description:
+      "Руководители среднего звена, директора направлений — находим лидеров, которые строят команды.",
+    features: [
+      "Глубинные интервью",
+      "Оценка по компетенциям",
+      "Психологическое тестирование",
+      "Срок 14–21 день",
+    ],
     accent: "accent",
   },
   {
-    icon: "BarChart3",
-    title: "Аудит рекламы",
-    description: "Найдём, куда утекает бюджет. Покажем конкретные точки роста и дадим план исправления за 24 часа.",
-    features: ["Анализ текущих кампаний", "Оценка семантики", "Проверка посадочных", "Готовый план действий"],
+    icon: "Crown",
+    title: "Executive Search",
+    description:
+      "Топ-менеджмент и C-level — конфиденциальный прямой поиск среди пассивных кандидатов.",
+    features: [
+      "Headhunting",
+      "Полная конфиденциальность",
+      "Персональный партнёр",
+      "Срок 21–30 дней",
+    ],
     accent: "primary",
   },
   {
-    icon: "Globe",
-    title: "Комплексное продвижение",
-    description: "Директ + SEO в одном пакете. Быстрые заявки сразу и стабильный органический поток в перспективе.",
-    features: ["Единая стратегия", "Один менеджер", "Сквозная аналитика", "Оплата за результат"],
+    icon: "ClipboardList",
+    title: "HR-аудит и консультации",
+    description:
+      "Диагностика системы найма, разработка профилей должностей и стандартов оценки кандидатов.",
+    features: [
+      "Аудит HR-процессов",
+      "Профили должностей",
+      "Скрипты интервью",
+      "Онбординг-программы",
+    ],
     accent: "accent",
   },
 ];
@@ -40,7 +64,7 @@ const ServicesSection = () => {
             Наши <span className="gradient-primary-text">услуги</span>
           </h2>
           <p className="font-body text-gray-500 text-lg">
-            Всё для привлечения клиентов из интернета — от настройки до аналитики
+            Комплексные решения по подбору персонала для любых задач бизнеса
           </p>
         </div>
 
@@ -50,13 +74,17 @@ const ServicesSection = () => {
               key={i}
               className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group"
             >
-              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
-                service.accent === "primary" ? "bg-primary/10" : "bg-accent/10"
-              }`}>
+              <div
+                className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
+                  service.accent === "primary" ? "bg-primary/10" : "bg-accent/10"
+                }`}
+              >
                 <Icon
-                  name={service.icon as "MousePointerClick"}
+                  name={service.icon as "Users"}
                   size={28}
-                  className={service.accent === "primary" ? "text-primary" : "text-accent"}
+                  className={
+                    service.accent === "primary" ? "text-primary" : "text-accent"
+                  }
                 />
               </div>
 
@@ -70,10 +98,14 @@ const ServicesSection = () => {
               <ul className="space-y-2">
                 {service.features.map((feature, j) => (
                   <li key={j} className="flex items-center gap-3">
-                    <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
-                      service.accent === "primary" ? "bg-primary" : "bg-accent"
-                    }`} />
-                    <span className="font-body text-sm text-gray-600">{feature}</span>
+                    <div
+                      className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
+                        service.accent === "primary" ? "bg-primary" : "bg-accent"
+                      }`}
+                    />
+                    <span className="font-body text-sm text-gray-600">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>

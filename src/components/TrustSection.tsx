@@ -4,43 +4,46 @@ const trustItems = [
   {
     icon: "FileText",
     title: "Работа по договору",
-    description: "KPI и сроки прописаны официально. Никаких устных договорённостей.",
+    description: "Официальное оформление с чёткими KPI и сроками",
   },
   {
-    icon: "Eye",
-    title: "Доступ к кабинету",
-    description: "Вы всегда видите рекламный кабинет и все расходы в реальном времени.",
+    icon: "Shield",
+    title: "NDA",
+    description: "Подписываем соглашение о неразглашении информации",
   },
   {
-    icon: "RotateCcw",
-    title: "Гарантия возврата",
-    description: "Не достигли KPI — вернём деньги за месяц работы. Без споров.",
+    icon: "Lock",
+    title: "Конфиденциальность",
+    description: "Данные кандидатов и компании под защитой",
   },
   {
     icon: "Star",
     title: "Отзывы клиентов",
-    description: "Более 80 рекомендаций от собственников бизнеса по всей России.",
+    description: "Более 50 рекомендаций от собственников бизнеса",
   },
 ];
 
 const testimonials = [
   {
-    quote: "До обращения тратили 100 000 ₽ в месяц на Директ и получали 8–10 заявок. После — те же деньги, но уже 60+ заявок. Результат говорит сам за себя.",
-    author: "Андрей Соколов",
-    position: "Владелец",
-    company: "Сеть автосервисов",
-  },
-  {
-    quote: "SEO-продвижение дало результат через 3 месяца — 200+ переходов в день из Яндекса. Сейчас органика приносит больше заявок, чем платная реклама.",
-    author: "Елена Морозова",
-    position: "Директор",
-    company: "Юридическая компания",
-  },
-  {
-    quote: "Наконец-то нашли подрядчика, которому не страшно доверить бюджет. Всё прозрачно, менеджер всегда на связи, результаты растут каждый месяц.",
-    author: "Михаил Громов",
+    quote:
+      "НаймLab закрыл нам 5 позиций senior-разработчиков за 3 недели. Раньше мы тратили на это месяцы. Качество кандидатов превзошло все ожидания.",
+    author: "Алексей Петров",
     position: "CEO",
-    company: "Интернет-магазин",
+    company: "TechVision",
+  },
+  {
+    quote:
+      "Благодаря системному подходу к подбору мы снизили текучку с 50% до 12% за полгода. Это лучшая инвестиция в HR, которую мы сделали.",
+    author: "Мария Иванова",
+    position: "HR-директор",
+    company: "E-mart",
+  },
+  {
+    quote:
+      "Искали операционного директора полгода. НаймLab нашёл идеального кандидата за 3 недели. Работает у нас уже 2 года — лучший найм в истории компании.",
+    author: "Дмитрий Козлов",
+    position: "Основатель",
+    company: "ProdGroup",
   },
 ];
 
@@ -48,28 +51,39 @@ const TrustSection = () => {
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4 md:px-6">
+        {/* Section Title */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-dark mb-4">
             Работаем{" "}
-            <span className="gradient-primary-text">прозрачно</span> и честно
+            <span className="gradient-primary-text">прозрачно</span> и
+            безопасно
           </h2>
           <p className="font-body text-gray-500 text-lg">
-            Никаких чёрных ящиков — только чёткие условия и реальные результаты
+            Гарантируем профессионализм и конфиденциальность на каждом этапе
           </p>
         </div>
 
+        {/* Trust Items */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {trustItems.map((item, i) => (
-            <div key={i} className="text-center p-6 rounded-2xl hover:bg-light transition-colors duration-300 group">
-              <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary/20">
+            <div
+              key={i}
+              className="text-center p-6 rounded-2xl hover:bg-light transition-colors duration-300 group"
+            >
+              <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary/20 group-hover:shadow-primary/30 transition-shadow">
                 <Icon name={item.icon as "FileText"} size={28} className="text-white" />
               </div>
-              <h3 className="font-heading font-semibold text-lg text-dark mb-2">{item.title}</h3>
-              <p className="font-body text-sm text-gray-500">{item.description}</p>
+              <h3 className="font-heading font-semibold text-lg text-dark mb-2">
+                {item.title}
+              </h3>
+              <p className="font-body text-sm text-gray-500">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
 
+        {/* Testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <div key={i} className="bg-light rounded-2xl p-7 relative">

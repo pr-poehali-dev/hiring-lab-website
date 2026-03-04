@@ -86,7 +86,8 @@ const CtaSection = () => {
           {/* Phone */}
           <div className="mt-8 flex items-center justify-center gap-2 text-white/60 font-body text-sm">
             <Icon name="Phone" size={16} />
-            <span>Или позвоните: +7 (927) 707-47-77</span>
+            <span>Или позвоните: </span>
+            <a href="tel:+79277074777" className="text-white hover:text-white/80 underline underline-offset-2 transition-colors">+7 (927) 707-47-77</a>
           </div>
         </div>
       </div>

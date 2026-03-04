@@ -1,82 +1,68 @@
-const metrics = [
+import Icon from "@/components/ui/icon";
+
+const advantages = [
   {
-    value: "95%",
-    title: "Релевантных кандидатов",
-    description:
-      "Точное попадание в профиль благодаря глубинной диагностике",
+    icon: "Target",
+    title: "Платите за результат",
+    description: "KPI прописываем в договоре. Не достигли — возвращаем деньги. Никаких отговорок.",
   },
   {
-    value: "21 день",
-    title: "Средний срок закрытия",
-    description:
-      "Отлаженные процессы позволяют работать быстро без потери качества",
+    icon: "Eye",
+    title: "Полная прозрачность",
+    description: "Доступ к рекламному кабинету всегда у вас. Еженедельные отчёты с понятными цифрами.",
   },
   {
-    value: "350+",
-    title: "Закрытых вакансий",
-    description:
-      "Опыт в IT, производстве, e-commerce, услугах и других отраслях",
+    icon: "Zap",
+    title: "Первые заявки от 7 дней",
+    description: "Запускаем рекламу быстро. Уже через неделю после старта вы получаете первые обращения.",
   },
   {
-    value: "90 дней",
-    title: "Гарантия замены",
-    description:
-      "Бесплатная замена кандидата если он не прошёл испытательный срок",
+    icon: "UserCheck",
+    title: "Личный менеджер",
+    description: "Один человек ведёт ваш проект от А до Я. Всегда на связи, знает всё о вашем бизнесе.",
   },
   {
-    value: "3 дня",
-    title: "До первых кандидатов",
-    description:
-      "Начинаем представлять релевантных кандидатов уже через 72 часа",
+    icon: "TrendingUp",
+    title: "Рост, а не топтание на месте",
+    description: "Постоянно тестируем гипотезы, оптимизируем и снижаем стоимость заявки каждый месяц.",
   },
   {
-    value: "−40%",
-    title: "Снижение текучки",
-    description:
-      "Системный подбор сокращает текучесть персонала в первый год",
+    icon: "Shield",
+    title: "Опыт в вашей нише",
+    description: "Работали с более чем 30 нишами. Знаем особенности вашего рынка и конкурентов.",
   },
 ];
 
 const WhyUsSection = () => {
   return (
-    <section className="relative py-20 md:py-28 bg-dark overflow-hidden">
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 grid-pattern-dark" />
-
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
-        {/* Section Title */}
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">
-            Почему выбирают{" "}
-            <span className="text-white">Найм</span>
-            <span className="text-accent">Lab</span>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-dark mb-4">
+            Почему выбирают <span className="gradient-primary-text">нас</span>
           </h2>
-          <p className="font-body text-gray-400 text-lg">
-            Цифры, которые говорят за нас
+          <p className="font-body text-gray-500 text-lg">
+            Мы не просто настраиваем рекламу — мы отвечаем за ваш результат
           </p>
         </div>
 
-        {/* Metrics Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {metrics.map((metric, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {advantages.map((adv, i) => (
             <div
               key={i}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 hover:bg-white/[0.08] transition-all duration-300 group"
+              className="group flex gap-5 p-6 rounded-2xl hover:bg-light transition-all duration-300"
             >
-              {/* Value */}
-              <div className="font-heading font-bold text-3xl md:text-4xl gradient-primary-text mb-3">
-                {metric.value}
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl gradient-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                <Icon name={adv.icon as "Target"} size={22} className="text-white" />
               </div>
-
-              {/* Title */}
-              <h3 className="font-heading font-semibold text-lg text-white mb-2">
-                {metric.title}
-              </h3>
-
-              {/* Description */}
-              <p className="font-body text-sm text-gray-400 leading-relaxed">
-                {metric.description}
-              </p>
+              <div>
+                <h3 className="font-heading font-semibold text-lg text-dark mb-2">
+                  {adv.title}
+                </h3>
+                <p className="font-body text-sm text-gray-500 leading-relaxed">
+                  {adv.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

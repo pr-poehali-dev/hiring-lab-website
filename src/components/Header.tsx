@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 
 const navLinks = [
   { label: "Услуги", href: "#services" },
-  { label: "Подход", href: "#approach" },
+  { label: "Как работаем", href: "#approach" },
   { label: "Кейсы", href: "#cases" },
   { label: "Тарифы", href: "#pricing" },
   { label: "Контакты", href: "#contacts" },
@@ -32,21 +32,16 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <img
-              src="https://cdn.poehali.dev/projects/37cee2e2-53a5-4b06-a0a0-fb53f1ff84f4/bucket/f5a34b6b-33d0-41a4-8a5a-9a1547e11920.PNG"
-              alt="НаймLab"
-              className="h-12 w-12 object-contain"
-              style={{ mixBlendMode: "multiply", filter: "brightness(1.2)" }}
-            />
+          <a href="#" className="flex items-center gap-2">
+            <div className="w-9 h-9 rounded-lg gradient-primary flex items-center justify-center">
+              <Icon name="TrendingUp" size={20} className="text-white" />
+            </div>
             <span className="font-heading text-xl md:text-2xl font-bold">
-              <span className="text-white">Найм</span>
-              <span className="text-accent">Lab</span>
+              <span className="text-white">Траф</span>
+              <span className="text-accent">фик</span>
             </span>
           </a>
 
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -59,31 +54,25 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
           <div className="hidden lg:block">
             <Button
               className="gradient-primary text-white font-body font-semibold rounded-xl px-6 h-10 border-0 hover:opacity-90 transition-opacity"
               onClick={() => document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Оставить заявку
+              Получить аудит
             </Button>
           </div>
 
-          {/* Mobile Hamburger */}
           <button
             className="lg:hidden text-white p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <Icon
-              name={isMobileMenuOpen ? "X" : "Menu"}
-              size={24}
-            />
+            <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={`lg:hidden overflow-hidden transition-all duration-300 ${
           isMobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
@@ -105,7 +94,7 @@ const Header = () => {
               className="gradient-primary text-white font-body font-semibold rounded-xl mt-2 w-full border-0 hover:opacity-90"
               onClick={() => { document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" }); setIsMobileMenuOpen(false); }}
             >
-              Оставить заявку
+              Получить аудит
             </Button>
           </nav>
         </div>

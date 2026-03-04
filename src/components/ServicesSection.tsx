@@ -2,132 +2,81 @@ import Icon from "@/components/ui/icon";
 
 const services = [
   {
-    icon: "Users",
-    title: "Подбор линейного персонала",
-    description:
-      "Массовый и точечный подбор специалистов для операционных задач бизнеса",
-    features: [
-      "От 5 вакансий одновременно",
-      "Срок: 7–14 дней",
-      "Гарантия замены 60 дней",
-    ],
+    icon: "MousePointerClick",
+    title: "Яндекс Директ",
+    description: "Настройка и ведение контекстной рекламы. Поиск, РСЯ, ретаргетинг. Максимум заявок при минимальном бюджете.",
+    features: ["Анализ конкурентов", "Подбор 500+ ключей", "A/B тесты объявлений", "Еженедельные отчёты"],
+    accent: "primary",
   },
   {
-    icon: "Briefcase",
-    title: "Подбор управленцев",
-    description:
-      "Поиск руководителей отделов, директоров и C-level позиций",
-    features: [
-      "Оценка лидерских компетенций",
-      "Срок: 14–30 дней",
-      "Гарантия замены 90 дней",
-    ],
+    icon: "Search",
+    title: "SEO-продвижение",
+    description: "Вывод сайта в топ Яндекса и Google. Органический трафик, который работает 24/7 без оплаты за клик.",
+    features: ["Технический аудит", "Написание SEO-текстов", "Ссылочное продвижение", "Рост позиций от 3 мес"],
+    accent: "accent",
   },
   {
-    icon: "Crown",
-    title: "Executive Search",
-    description:
-      "Конфиденциальный поиск топ-менеджеров и редких специалистов",
-    features: [
-      "Прямой поиск по рынку",
-      "Headhunting из конкурентов",
-      "Полная конфиденциальность",
-    ],
+    icon: "BarChart3",
+    title: "Аудит рекламы",
+    description: "Найдём, куда утекает бюджет. Покажем конкретные точки роста и дадим план исправления за 24 часа.",
+    features: ["Анализ текущих кампаний", "Оценка семантики", "Проверка посадочных", "Готовый план действий"],
+    accent: "primary",
   },
   {
-    icon: "ClipboardCheck",
-    title: "HR-аудит",
-    description:
-      "Диагностика HR-процессов и рекомендации по оптимизации системы найма",
-    features: [
-      "Анализ воронки найма",
-      "Оценка HR-метрик",
-      "План улучшений на 90 дней",
-    ],
-  },
-  {
-    icon: "Settings",
-    title: "Построение HR-системы",
-    description:
-      "Создание HR-отдела под ключ: процессы, инструменты, обучение команды",
-    features: [
-      "Регламенты и скрипты",
-      "Настройка ATS",
-      "Обучение HR-команды",
-    ],
+    icon: "Globe",
+    title: "Комплексное продвижение",
+    description: "Директ + SEO в одном пакете. Быстрые заявки сразу и стабильный органический поток в перспективе.",
+    features: ["Единая стратегия", "Один менеджер", "Сквозная аналитика", "Оплата за результат"],
+    accent: "accent",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="relative py-20 md:py-28 bg-light overflow-hidden">
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 grid-pattern" />
-
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
-        {/* Section Title */}
+    <section id="services" className="py-20 md:py-28 bg-light">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-dark mb-4">
-            <span className="gradient-primary-text">Услуги</span>
+            Наши <span className="gradient-primary-text">услуги</span>
           </h2>
           <p className="font-body text-gray-500 text-lg">
-            Полный спектр HR-решений для бизнеса любого масштаба
+            Всё для привлечения клиентов из интернета — от настройки до аналитики
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service, i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group relative overflow-hidden border-b-4 border-transparent hover:border-b-4 hover:border-primary"
+              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group"
             >
-              {/* Gradient top accent on hover */}
-              <div className="absolute top-0 left-0 right-0 h-1 gradient-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors duration-300">
+              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
+                service.accent === "primary" ? "bg-primary/10" : "bg-accent/10"
+              }`}>
                 <Icon
-                  name={service.icon}
-                  size={26}
-                  className="text-primary"
+                  name={service.icon as "MousePointerClick"}
+                  size={28}
+                  className={service.accent === "primary" ? "text-primary" : "text-accent"}
                 />
               </div>
 
-              {/* Title */}
-              <h3 className="font-heading font-semibold text-xl text-dark mb-3">
+              <h3 className="font-heading font-bold text-xl text-dark mb-3">
                 {service.title}
               </h3>
-
-              {/* Description */}
               <p className="font-body text-gray-500 text-sm leading-relaxed mb-6">
                 {service.description}
               </p>
 
-              {/* Features */}
-              <ul className="space-y-3 mb-6">
-                {service.features.map((feature, fi) => (
-                  <li key={fi} className="flex items-start gap-2.5">
-                    <Icon
-                      name="Check"
-                      size={16}
-                      className="text-accent mt-0.5 flex-shrink-0"
-                    />
-                    <span className="font-body text-sm text-gray-600">
-                      {feature}
-                    </span>
+              <ul className="space-y-2">
+                {service.features.map((feature, j) => (
+                  <li key={j} className="flex items-center gap-3">
+                    <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
+                      service.accent === "primary" ? "bg-primary" : "bg-accent"
+                    }`} />
+                    <span className="font-body text-sm text-gray-600">{feature}</span>
                   </li>
                 ))}
               </ul>
-
-              {/* Link */}
-              <a
-                href="#"
-                className="inline-flex items-center gap-1.5 font-body text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-              >
-                Подробнее
-                <Icon name="ArrowRight" size={14} />
-              </a>
             </div>
           ))}
         </div>
